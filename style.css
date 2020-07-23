@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(130deg, #659999, #f4791f);
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+i {
+  pointer-events: none;
+}
+button {
+  cursor: pointer;
+}
+
+form,
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+header h1 {
+  text-shadow: 2px 2px 4px black;
+  font-weight: bolder;
+  letter-spacing: 0.4rem;
+  word-spacing: 0.8rem;
+}
+
+.input,
+.addButton {
+  padding: 0.3rem;
+  background-color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  height: 2rem;
+  outline: none;
+}
+.input {
+  width: 20rem;
+  font-weight: 600;
+}
+
+.addButton {
+  color: #f4791f;
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 0.4rem;
+  align-self: center;
+  transition: all 0.3s ease;
+}
+.addButton:hover {
+  background-color: #f4791f;
+  color: #ffffff;
+}
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30%;
+  margin: 0.5rem 30%;
+  text-align: start;
+  background-color: #ffffff;
+  min-height: 1.8rem;
+  border-radius: 2px;
+  position: relative;
+  text-overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.list {
+  flex: 1;
+  list-style: none;
+  color: #000;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+
+.check-button,
+.delete-button {
+  color: #ffffff;
+  background-color: #ff8833;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: #d66513;
+}
+.check-button {
+  background-color: rgb(38, 209, 38);
+}
+.check-button:hover {
+  background-color: rgb(0, 167, 0);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.4;
+  color: #000;
+}
+
+.fall {
+  transform: translateX(12rem);
+  opacity: 0;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  outline-style: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #f4791f;
+  width: 8rem;
+}
+.select {
+  margin: 1rem;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: #f4791f;
+  padding: 0.4rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.select:hover::after {
+  background-color: #f4791f;
+  color: #ffffff;
+}
+
+/* ---------- Media query ------------- */
+@media (max-width: 1120px) {
+  header,
+  form {
+    min-height: 12vh;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+  .list-item {
+    margin: 0.4rem 20%;
+    font-size: 0.8rem;
+  }
+  .input,
+  .addButton {
+    padding: 0.5rem;
+  }
+  .input {
+    width: 15rem;
+  }
+  .select {
+    width: 6rem;
+    margin: 0.5rem;
+  }
+  .select::after {
+    padding: auto 0.2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  header,
+  form {
+    min-height: 15vh;
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  .list-item {
+    margin: 0.4rem 10%;
+    font-size: 0.8rem;
+  }
+  .input,
+  .addButton {
+    padding: 0.5rem;
+  }
+  .input {
+    max-width: 8rem;
+  }
+  .select {
+    width: 6rem;
+    margin: 0.5rem;
+  }
+  .select::after {
+    padding: auto 0.2rem;
+  }
+}
